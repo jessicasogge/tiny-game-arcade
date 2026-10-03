@@ -41,6 +41,7 @@ Blank "next game goes here" cartridges fill out the last row of the shelf on the
 - `public/arcade.js`: fills the shelf from the list and loads the picked game into the screen.
 - `public/art/`: one cartridge picture per game, plus `blank.svg`.
 - `public/styles.css`: one stylesheet, in sections: marquee, cabinet, shelf, footer.
+- `public/share.png`: the 1200 × 630 picture that shows when the link is shared in a text or a chat. If the shelf changes a lot, it's worth remaking.
 - `public/sitemap.xml`: every page, for search engines.
 
 Pushing to `main` publishes `public/` to GitHub Pages (`.github/workflows/pages.yml`).

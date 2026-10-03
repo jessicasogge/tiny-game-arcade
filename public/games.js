@@ -17,7 +17,7 @@ export const GAMES = [
     title: 'PetriPals',
     sub: 'Grow a colony of microbes',
     blurb: 'Pick a bacterium, grow your colony, dodge antibiotics and race rival microbes.',
-    tags: ['Microbiology', 'Classic', 'Mixed Culture'],
+    tags: ['Microbiology', 'Science', 'Bacteria'],
     url: 'https://jessicasogge.github.io/petripals/',
     shell: '#2EC4B6',
     screen: '#16706A',

@@ -76,7 +76,7 @@ export function start(doc, games = GAMES) {
       }),
     );
     play.href = game.url;
-    play.setAttribute('aria-label', `Press start: play ${game.title}`);
+    play.setAttribute('aria-label', `Press start: play ${game.title} (opens in a new tab)`);
     return game;
   }
 

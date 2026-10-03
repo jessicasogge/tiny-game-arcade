@@ -63,8 +63,13 @@ describe('arcade page', () => {
     expect($('.screen-title').textContent).toBe('Game Two');
     expect([...document.querySelectorAll('.screen-tags li')].map((li) => li.textContent)).toEqual(['C']);
     expect($('.press-start').getAttribute('href')).toBe('https://example.com/two/');
-    expect($('.press-start').getAttribute('aria-label')).toBe('Press start: play Game Two');
+    expect($('.press-start').getAttribute('aria-label')).toBe('Press start: play Game Two (opens in a new tab)');
     expect($('.screen').style.getPropertyValue('--screen')).toBe('#444444');
+  });
+
+  it('opens the game in a new tab, so the arcade stays open', () => {
+    expect($('.press-start').getAttribute('target')).toBe('_blank');
+    expect($('.press-start').getAttribute('rel')).toBe('noopener');
   });
 
   it('loads a game when you tap the picture or label on its cartridge', () => {

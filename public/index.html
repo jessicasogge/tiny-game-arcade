@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tiny Game Arcade: Silly Browser Games</title>
+    <meta name="description" content="A shelf full of silly browser games. Pick a cartridge and play right in your browser: no downloads, no logins." />
+    <link rel="canonical" href="https://jessicasogge.github.io/tiny-game-arcade/" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./fonts/bungee-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jessicasogge.github.io/tiny-game-arcade/" />
+    <meta property="og:title" content="Tiny Game Arcade" />
+    <meta property="og:description" content="A shelf full of silly browser games." />
+  </head>
+  <body>
+    <div class="page">
+      <!-- The marquee sign: blinking bulbs above and below the title. -->
+      <header class="marquee">
+        <div class="bulbs" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h1 class="logo">Tiny Game Arcade</h1>
+        <p class="tagline">A shelf full of silly browser games.</p>
+        <div class="bulbs" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </header>
+
+      <main class="hall">
+        <!-- The arcade cabinet. arcade.js loads the picked game into it. -->
+        <section class="cabinet" aria-labelledby="now-loaded">
+          <div class="bezel">
+            <div class="screen" aria-live="polite">
+              <div class="scanline" aria-hidden="true"></div>
+              <p class="screen-kicker" id="now-loaded">Now loaded</p>
+              <h2 class="screen-title">Tiny Game Arcade</h2>
+              <p class="screen-blurb">Pick a cartridge from the shelf.</p>
+              <ul class="screen-tags"></ul>
+              <a class="press-start" href="#">
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" /></svg>
+                Press Start
+              </a>
+            </div>
+          </div>
+          <div class="controls" aria-hidden="true">
+            <span class="joystick"><span class="stick"></span></span>
+            <span class="arcade-buttons"><span></span><span></span><span></span></span>
+          </div>
+        </section>
+
+        <!-- The shelf. arcade.js fills it from games.js. -->
+        <section class="shelf" aria-labelledby="shelf-heading">
+          <div class="shelf-head">
+            <h2 id="shelf-heading">Pick a cartridge</h2>
+            <span class="shelf-count"></span>
+          </div>
+          <div class="shelf-wood">
+            <div class="shelf-grid"></div>
+            <div class="shelf-plank" aria-hidden="true"></div>
+          </div>
+          <noscript>
+            <p class="noscript">The shelf needs JavaScript. You can still play:
+              <a href="https://jessicasogge.github.io/petripals/">PetriPals</a> ·
+              <a href="https://jessicasogge.github.io/build-a-rainbow/">Build a Rainbow</a></p>
+          </noscript>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Made by Jessica Sogge · every game runs right in your browser</span>
+        <span>No downloads · no logins · no locked levels</span>
+      </footer>
+    </div>
+
+    <script type="module">
+      import { start } from './arcade.js';
+      start(document);
+    </script>
+  </body>
+</html>

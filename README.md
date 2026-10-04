@@ -6,6 +6,7 @@ On the shelf now:
 
 - **[PetriPals](https://jessicasogge.github.io/petripals/):** pick a bacterium, grow your colony, dodge antibiotics and race rival microbes.
 - **[Build a Rainbow](https://jessicasogge.github.io/build-a-rainbow/):** eight rainbow color games for young kids.
+- **[The Legend of Mr. Froggles](https://jessicasogge.github.io/legend-of-froggles/):** a magical flying frog, based on an original drawing by Caitlin Sogge. Coming soon.
 
 ## Running it locally
 

@@ -82,6 +82,30 @@ describe('arcade page', () => {
   });
 });
 
+describe('edge cases', () => {
+  it('says "1 game", not "1 games", when the shelf has just one', () => {
+    loadPage(TEST_GAMES.slice(0, 1));
+    expect($('.shelf-count').textContent).toBe('1 game on the shelf');
+  });
+
+  it('does nothing when you tap a blank cartridge or the empty shelf', () => {
+    loadPage(TEST_GAMES);
+    carts()[1].click();
+    $('.cart-blank').click();
+    $('.shelf-grid').click();
+    expect($('.screen-title').textContent).toBe('Game Two');
+    expect(pressed().map((b) => b.dataset.game)).toEqual(['two']);
+  });
+
+  it('falls back to the first game when asked for one that isn\'t on the shelf', () => {
+    const arcade = loadPage(TEST_GAMES);
+    carts()[2].click();
+    expect(arcade.load('no-such-game').id).toBe('one');
+    expect($('.screen-title').textContent).toBe('Game One');
+    expect(pressed().map((b) => b.dataset.game)).toEqual(['one']);
+  });
+});
+
 describe('the real game list', () => {
   it('fills the shelf with every game', () => {
     loadPage(GAMES);

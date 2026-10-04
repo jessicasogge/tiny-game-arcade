@@ -37,7 +37,7 @@ export const GAMES = [
     title: 'The Legend of Mr. Froggles',
     sub: 'A magical flying frog',
     blurb: 'Mr. Froggles is a magical frog who can fly, leaving purple enchantments wherever he goes. Based on an original drawing by Caitlin Sogge. Coming soon!',
-    tags: ['Coming soon', 'Young readers', 'Magic'],
+    tags: ['Frogs', 'Young readers', 'Magic'],
     url: 'https://jessicasogge.github.io/legend-of-froggles/',
     shell: '#1F8A4C',
     screen: '#145A33',

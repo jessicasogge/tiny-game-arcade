@@ -24,6 +24,14 @@ To run the tests:
 npm test
 ```
 
+To see how much of the code the tests run:
+
+```sh
+npm run coverage
+```
+
+It prints a table, and writes a page you can click through at `coverage/index.html`.
+
 ## Adding a game
 
 1. Add an entry to [`public/games.js`](public/games.js). The comment at the top says what each field is for.

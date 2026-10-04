@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 76">
+  <rect width="120" height="76" fill="#FFFDF7" />
+  <!-- Enchantments -->
+  <g fill="none" stroke="#5B2A9E" stroke-width="3" stroke-linecap="round">
+    <path d="M14 14 C6 30 8 48 20 60" />
+    <path d="M106 14 C114 30 112 48 100 60" />
+    <path d="M26 70 C34 64 42 72 50 68" />
+    <path d="M94 70 C86 64 78 72 70 68" />
+  </g>
+  <g fill="#5B2A9E">
+    <circle cx="24" cy="30" r="2.2" />
+    <circle cx="96" cy="30" r="2.2" />
+    <circle cx="60" cy="72" r="2.2" />
+  </g>
+  <!-- Mr. Froggles, from legend-of-froggles/public/mr-froggles.svg -->
+  <g transform="translate(33 2) scale(0.27)">
+    <path d="M78 14 q5 -9 10 0 q5 9 10 0 q5 -9 10 0 q5 9 10 0" fill="none" stroke="#5B2A9E" stroke-width="6" stroke-linecap="round" />
+    <path d="M28 108 L100 168 L28 228 Z" fill="#1F8A4C" stroke="#1A1A1A" stroke-width="7" stroke-linejoin="round" />
+    <path d="M172 108 L100 168 L172 228 Z" fill="#1F8A4C" stroke="#1A1A1A" stroke-width="7" stroke-linejoin="round" />
+    <ellipse cx="100" cy="168" rx="30" ry="66" fill="#1F8A4C" stroke="#145A33" stroke-width="7" />
+    <ellipse cx="100" cy="166" rx="6" ry="34" fill="#3FA06A" />
+    <circle cx="76" cy="46" r="15" fill="#1F8A4C" stroke="#145A33" stroke-width="6" />
+    <circle cx="124" cy="46" r="15" fill="#1F8A4C" stroke="#145A33" stroke-width="6" />
+    <rect x="60" y="44" width="80" height="66" rx="30" fill="#1F8A4C" stroke="#145A33" stroke-width="6" />
+    <rect x="66" y="50" width="68" height="20" fill="#1F8A4C" />
+    <circle cx="76" cy="44" r="7" fill="#1A1A1A" />
+    <circle cx="124" cy="44" r="7" fill="#1A1A1A" />
+    <path d="M84 80 Q100 78 116 80 Q114 104 100 104 Q86 104 84 80 Z" fill="#5A2E1E" stroke="#1A1A1A" stroke-width="4" />
+  </g>
+</svg>

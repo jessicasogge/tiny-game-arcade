@@ -23,6 +23,16 @@ export const GAMES = [
     screen: '#16706A',
   },
   {
+    id: 'fungals',
+    title: 'FunGals',
+    sub: 'Grow a colony of yeast',
+    blurb: 'Pick a fungal pal, eat nutrients to bud your colony and steer clear of the antifungal disks. The sister game to PetriPals.',
+    tags: ['Mycology', 'Science', 'Fungi'],
+    url: 'https://jessicasogge.github.io/fungals/',
+    shell: '#C08552',
+    screen: '#6B4220',
+  },
+  {
     id: 'build-a-rainbow',
     title: 'Build a Rainbow',
     sub: 'Eight rainbow color games',

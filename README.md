@@ -5,6 +5,7 @@ A shelf full of silly browser games. One page that links to every game: pick a c
 On the shelf now:
 
 - **[PetriPals](https://jessicasogge.github.io/petripals/):** pick a bacterium, grow your colony, dodge antibiotics and race rival microbes.
+- **[FunGals](https://jessicasogge.github.io/fungals/):** the sister game to PetriPals: pick a fungal pal, bud your yeast colony and steer clear of the antifungal disks.
 - **[Build a Rainbow](https://jessicasogge.github.io/build-a-rainbow/):** eight rainbow color games for young kids.
 - **[The Legend of Mr. Froggles](https://jessicasogge.github.io/legend-of-froggles/):** a magical flying frog, based on an original drawing by Caitlin Sogge. Coming soon.
 

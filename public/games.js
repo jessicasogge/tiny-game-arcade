@@ -27,7 +27,7 @@ export const GAMES = [
     title: 'FunGals',
     sub: 'Grow a colony of yeast',
     blurb: 'Pick a fungal pal, eat nutrients to bud your colony and steer clear of the antifungal disks. The sister game to PetriPals.',
-    tags: ['Mycology', 'Science', 'Fungi'],
+    tags: ['Mycology', 'Science', 'Microbiology'],
     url: 'https://jessicasogge.github.io/fungals/',
     shell: '#C08552',
     screen: '#6B4220',

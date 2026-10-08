@@ -476,6 +476,56 @@ button.cart:hover {
   color: var(--muted);
 }
 
+/* ---------- Short windows ---------- */
+
+/* On a laptop the browser window is often only 650-800px tall. Tighten the
+   sign and the spacing so Press Start shows without scrolling. Phones stack
+   the cabinet first, so they don't need this. */
+@media (min-width: 721px) and (max-height: 900px) {
+  .page {
+    padding-top: 20px;
+    gap: 24px;
+  }
+
+  .marquee {
+    padding: 14px 24px 16px;
+    gap: 10px;
+  }
+
+  .bulbs span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .logo {
+    font-size: clamp(34px, 5vw, 60px);
+  }
+
+  .tagline {
+    font-size: 19px;
+  }
+
+  /* A wider cabinet, so long titles and blurbs wrap onto fewer lines. */
+  .cabinet {
+    flex-basis: 430px;
+  }
+
+  .screen-title {
+    font-size: clamp(26px, 2.6vw, 34px);
+  }
+
+  .screen {
+    min-height: 0;
+    padding: 22px 24px;
+    gap: 10px;
+  }
+
+  .screen-blurb {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bulbs span,
   .scanline {

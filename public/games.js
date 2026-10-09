@@ -46,7 +46,7 @@ export const GAMES = [
     id: 'legend-of-froggles',
     title: 'The Legend of Mr. Froggles',
     sub: 'A magical flying frog',
-    blurb: 'Mr. Froggles is a magical frog who can fly, leaving purple enchantments wherever he goes. Coming soon!',
+    blurb: 'Mr. Froggles is a magical frog who can fly, leaving purple enchantments wherever he goes.',
     tags: ['Frogs', 'Young readers', 'Magic'],
     url: 'https://jessicasogge.github.io/legend-of-froggles/',
     shell: '#1F8A4C',

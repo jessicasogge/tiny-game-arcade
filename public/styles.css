@@ -386,8 +386,7 @@ a {
 
 .shelf-grid {
   display: grid;
-  /* Four across (two on small screens), to match the blank cartridges that
-     arcade.js adds to fill out the last row. */
+  /* Four across (two on small screens). */
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 40px 16px;
 }
@@ -464,10 +463,6 @@ button.cart:hover {
 .cart-sub {
   font-size: 13px;
   color: #4a4366;
-}
-
-.cart-blank {
-  opacity: 0.75;
 }
 
 .noscript {

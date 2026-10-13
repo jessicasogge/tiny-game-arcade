@@ -2,12 +2,6 @@
 // screen. The game list itself lives in games.js.
 import { GAMES } from './games.js';
 
-// The shelf always ends with at least one blank cartridge, and blanks fill
-// out the last row of four.
-export function blankCount(gameCount) {
-  return Math.max(1, (4 - (gameCount % 4)) % 4);
-}
-
 function cartridge(doc, game) {
   const button = doc.createElement('button');
   button.type = 'button';
@@ -39,15 +33,6 @@ function cartridge(doc, game) {
   return button;
 }
 
-function blankCartridge(doc) {
-  const slot = doc.createElement('div');
-  slot.className = 'cart cart-blank';
-  slot.innerHTML =
-    '<span class="cart-label"><img class="cart-art" src="./art/blank.svg" alt="" width="120" height="76">' +
-    '<span class="cart-title">Blank cartridge</span><span class="cart-sub">Next game goes here</span></span>';
-  return slot;
-}
-
 export function start(doc, games = GAMES) {
   const shelf = doc.querySelector('.shelf-grid');
   const screen = doc.querySelector('.screen');
@@ -59,7 +44,6 @@ export function start(doc, games = GAMES) {
 
   const buttons = games.map((game) => cartridge(doc, game));
   shelf.replaceChildren(...buttons);
-  for (let i = 0; i < blankCount(games.length); i++) shelf.append(blankCartridge(doc));
   count.textContent = games.length === 1 ? '1 game on the shelf' : `${games.length} games on the shelf`;
 
   function load(id) {

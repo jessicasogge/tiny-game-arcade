@@ -42,19 +42,17 @@ It prints a table, and writes a page you can click through at `coverage/index.ht
 
 The tests check each entry: every field is filled in, the link is a full `https://` address, the screen color is dark enough for white text, the picture exists, and the game is in the `<noscript>` list.
 
-Blank "next game goes here" cartridges fill out the last row of the shelf on their own.
-
 ## How the code is organized
 
 - `public/index.html`: the page: marquee sign, arcade cabinet, shelf.
 - `public/games.js`: the list of games, in shelf order.
 - `public/arcade.js`: fills the shelf from the list and loads the picked game into the screen.
-- `public/art/`: one cartridge picture per game, plus `blank.svg`.
+- `public/art/`: one cartridge picture per game.
 - `public/styles.css`: one stylesheet, in sections: marquee, cabinet, shelf, footer.
 - `public/share.png`: the 1200 × 630 picture that shows when the link is shared in a text or a chat. If the shelf changes a lot, it's worth remaking.
 - `public/sitemap.xml`: every page, for search engines.
 
-Pushing to `main` publishes `public/` to GitHub Pages (`.github/workflows/pages.yml`).
+Pushing to `main` runs the tests, then publishes `public/` to GitHub Pages if they pass (`.github/workflows/pages.yml`).
 
 ## Fonts
 

@@ -4,7 +4,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { blankCount, start } from '../public/arcade.js';
+import { start } from '../public/arcade.js';
 import { GAMES } from '../public/games.js';
 
 const html = readFileSync(join(process.cwd(), 'public/index.html'), 'utf8');
@@ -39,10 +39,8 @@ describe('arcade page', () => {
     }
   });
 
-  it('ends the shelf with a blank cartridge you cannot press', () => {
-    const blanks = document.querySelectorAll('.cart-blank');
-    expect(blanks).toHaveLength(1);
-    expect(blanks[0].tagName).toBe('DIV');
+  it('has nothing on the shelf but the games', () => {
+    expect(document.querySelectorAll('.shelf-grid > *')).toHaveLength(3);
   });
 
   it('counts the games', () => {
@@ -88,10 +86,9 @@ describe('edge cases', () => {
     expect($('.shelf-count').textContent).toBe('1 game on the shelf');
   });
 
-  it('does nothing when you tap a blank cartridge or the empty shelf', () => {
+  it('does nothing when you tap the empty shelf', () => {
     loadPage(TEST_GAMES);
     carts()[1].click();
-    $('.cart-blank').click();
     $('.shelf-grid').click();
     expect($('.screen-title').textContent).toBe('Game Two');
     expect(pressed().map((b) => b.dataset.game)).toEqual(['two']);
@@ -111,11 +108,5 @@ describe('the real game list', () => {
     loadPage(GAMES);
     expect(carts().map((b) => b.dataset.game)).toEqual(GAMES.map((g) => g.id));
     expect($('.press-start').getAttribute('href')).toBe(GAMES[0].url);
-  });
-});
-
-describe('blank cartridges', () => {
-  it('fill out the last row of four, always at least one', () => {
-    expect([1, 2, 3, 4, 5, 8].map(blankCount)).toEqual([3, 2, 1, 1, 3, 1]);
   });
 });

@@ -101,17 +101,6 @@ a {
   animation-delay: 0.6s;
 }
 
-/* One row of bulbs on a phone. */
-@media (max-width: 480px) {
-  .bulbs {
-    gap: 12px;
-  }
-
-  .bulbs span:nth-child(n + 10) {
-    display: none;
-  }
-}
-
 @keyframes blink {
   50% { opacity: 0.25; }
 }
@@ -130,17 +119,6 @@ a {
   margin: 0;
   font-size: 22px;
   color: var(--lilac);
-}
-
-/* The tagline on one line on a phone. */
-@media (max-width: 480px) {
-  .marquee {
-    padding-inline: 14px;
-  }
-
-  .tagline {
-    font-size: 17px;
-  }
 }
 
 /* ---------- Cabinet + shelf side by side; stacked on small screens ---------- */
@@ -257,25 +235,6 @@ a {
   white-space: nowrap;
   text-decoration: none;
   box-shadow: 0 6px 0 var(--yellow-shadow);
-}
-
-@media (max-width: 480px) {
-  .cabinet {
-    padding: 16px;
-  }
-
-  .bezel {
-    padding: 12px;
-  }
-
-  .screen {
-    padding: 22px 18px;
-  }
-
-  .press-start {
-    padding: 14px 20px;
-    font-size: 19px;
-  }
 }
 
 .press-start svg {
@@ -480,6 +439,45 @@ button.cart:hover {
   border-top: 2px dashed var(--sign-edge);
   font-size: 16px;
   color: var(--muted);
+}
+
+/* ---------- Phones ---------- */
+
+/* Narrow screens: one row of bulbs, the tagline on one line, and a little
+   less padding around the arcade screen. */
+@media (max-width: 480px) {
+  .marquee {
+    padding-inline: 14px;
+  }
+
+  .bulbs {
+    gap: 12px;
+  }
+
+  .bulbs span:nth-child(n + 10) {
+    display: none;
+  }
+
+  .tagline {
+    font-size: 17px;
+  }
+
+  .cabinet {
+    padding: 16px;
+  }
+
+  .bezel {
+    padding: 12px;
+  }
+
+  .screen {
+    padding: 22px 18px;
+  }
+
+  .press-start {
+    padding: 14px 20px;
+    font-size: 19px;
+  }
 }
 
 /* ---------- Short windows ---------- */

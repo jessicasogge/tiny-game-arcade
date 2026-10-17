@@ -35,7 +35,7 @@ export const GAMES = [
   {
     id: 'build-a-rainbow',
     title: 'Build a Rainbow',
-    sub: 'Eight rainbow color games',
+    sub: 'Rainbow color games',
     blurb: 'Mix colors, build and paint rainbows, drive a rainbow road and more.',
     tags: ['Young kids', 'Rainbows', 'Colors'],
     url: 'https://jessicasogge.github.io/build-a-rainbow/',

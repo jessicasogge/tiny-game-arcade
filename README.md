@@ -8,6 +8,7 @@ On the shelf now:
 - **[FunGals](https://jessicasogge.github.io/fungals/):** the sister game to PetriPals: pick a fungal pal, bud your yeast colony and steer clear of the antifungal disks.
 - **[Build a Rainbow](https://jessicasogge.github.io/build-a-rainbow/):** eight rainbow color games for young kids.
 - **[The Legend of Mr. Froggles](https://jessicasogge.github.io/legend-of-froggles/):** a magical flying frog, based on an original drawing by Caitlin Sogge. Coming soon.
+- **[Snackerpillar](https://jessicasogge.github.io/snackerpillar/):** steer a hungry caterpillar made of circles, eat colored dots to grow, and don't bump into rocks, mushrooms or her own tail.
 
 ## Running it locally
 

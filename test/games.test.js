@@ -59,7 +59,9 @@ describe('game list', () => {
       });
 
       it('is in the no-JavaScript fallback list', () => {
-        expect(html).toContain(`<a href="${game.url}">${game.title}</a>`);
+        // The list doesn't need the soft hyphens that help long names wrap.
+        const title = game.title.replaceAll('\u00AD', '');
+        expect(html).toContain(`<a href="${game.url}">${title}</a>`);
       });
     });
   }

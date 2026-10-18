@@ -3,6 +3,8 @@
 //
 //   id       short name, lowercase with dashes; also the picture's file name
 //   title    the game's name, as it shows on the cartridge and the screen
+//            (if it's one long word, put a soft hyphen, \u00AD, where it can
+//            break: it only shows when the name has to wrap)
 //   sub      a few words for the cartridge label
 //   blurb    a sentence or two for the arcade screen
 //   tags     two or three short labels
@@ -51,5 +53,15 @@ export const GAMES = [
     url: 'https://jessicasogge.github.io/legend-of-froggles/',
     shell: '#1F8A4C',
     screen: '#145A33',
+  },
+  {
+    id: 'snackerpillar',
+    title: 'Snacker\u00ADpillar',
+    sub: 'A very hungry caterpillar',
+    blurb: 'Steer a caterpillar made of circles, eat colored dots to grow, and don\'t bump into rocks, mushrooms or her own tail.',
+    tags: ['Caterpillars', '8 levels', 'Colors'],
+    url: 'https://jessicasogge.github.io/snackerpillar/',
+    shell: '#B48CF0',
+    screen: '#2E4A1F',
   },
 ];

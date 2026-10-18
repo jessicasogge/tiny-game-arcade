@@ -192,6 +192,7 @@ a {
   font-size: clamp(30px, 4vw, 40px);
   line-height: 1.05;
   color: #fff;
+  overflow-wrap: break-word;
 }
 
 .screen-blurb {
@@ -417,6 +418,9 @@ button.cart:hover {
   font-family: var(--display);
   font-size: 15px;
   line-height: 1.15;
+  /* A one-word name too long for the label breaks instead of spilling off
+     it. Put a soft hyphen in the title (see games.js) to choose where. */
+  overflow-wrap: break-word;
 }
 
 .cart-sub {

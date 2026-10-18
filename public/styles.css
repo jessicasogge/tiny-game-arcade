@@ -348,6 +348,8 @@ a {
   display: grid;
   /* Four across (two on small screens). */
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* Every row as tall as the tallest cartridge, so they all match. */
+  grid-auto-rows: 1fr;
   gap: 40px 16px;
 }
 

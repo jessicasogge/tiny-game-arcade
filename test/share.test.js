@@ -34,3 +34,17 @@ describe('link preview', () => {
     expect(meta('name', 'twitter:card')).toBe('summary_large_image');
   });
 });
+
+describe('home screen icon', () => {
+  it('is linked from the page, with a short name to go under it', () => {
+    expect(html).toContain('<link rel="apple-touch-icon" href="./apple-touch-icon.png" />');
+    expect(meta('name', 'apple-mobile-web-app-title')).toBe('Tiny Arcade');
+  });
+
+  it('is a 180 × 180 picture with no see-through parts (iPhones fill those with black)', () => {
+    const png = readFileSync(join(process.cwd(), 'public/apple-touch-icon.png'));
+    expect(png.readUInt32BE(16)).toBe(180);
+    expect(png.readUInt32BE(20)).toBe(180);
+    expect(png[25]).toBe(2); // PNG color type 2: red, green, blue, no transparency
+  });
+});

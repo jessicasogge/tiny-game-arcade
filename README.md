@@ -51,6 +51,7 @@ The tests check each entry: every field is filled in, the link is a full `https:
 - `public/art/`: one cartridge picture per game.
 - `public/styles.css`: one stylesheet, in sections: marquee, cabinet, shelf, footer.
 - `public/share.png`: the 1200 × 630 picture that shows when the link is shared in a text or a chat. If the shelf changes a lot, it's worth remaking.
+- `public/apple-touch-icon.png`: the 180 × 180 icon an iPhone or iPad uses when the arcade is added to the home screen. It's the tab icon (`favicon.svg`) scaled up on the page's night background, with no see-through parts.
 - `public/sitemap.xml`: every page, for search engines.
 
 Pushing to `main` runs the tests, then publishes `public/` to GitHub Pages if they pass (`.github/workflows/pages.yml`).

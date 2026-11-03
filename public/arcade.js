@@ -41,6 +41,7 @@ export function start(doc, games = GAMES) {
   const tags = doc.querySelector('.screen-tags');
   const play = doc.querySelector('.press-start');
   const count = doc.querySelector('.shelf-count');
+  const cabinet = doc.querySelector('.cabinet');
 
   const buttons = games.map((game) => cartridge(doc, game));
   shelf.replaceChildren(...buttons);
@@ -64,9 +65,25 @@ export function start(doc, games = GAMES) {
     return game;
   }
 
+  // On a phone the cabinet sits above the shelf, so a game picked further
+  // down would load off screen. If the screen or Press Start isn't all
+  // showing, scroll the cabinet back into view: from its top if it all fits
+  // in the window, or else from the top of the screen, so Press Start fits.
+  function showCabinet() {
+    const win = doc.defaultView;
+    const top = screen.getBoundingClientRect().top;
+    const bottom = play.getBoundingClientRect().bottom;
+    if (top >= 0 && bottom <= win.innerHeight) return;
+    const fits = bottom - cabinet.getBoundingClientRect().top + 24 <= win.innerHeight;
+    const still = win.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    (fits ? cabinet : screen).scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' });
+  }
+
   shelf.addEventListener('click', (event) => {
     const button = event.target.closest('button.cart');
-    if (button) load(button.dataset.game);
+    if (!button) return;
+    load(button.dataset.game);
+    showCabinet();
   });
 
   load(games[0].id);

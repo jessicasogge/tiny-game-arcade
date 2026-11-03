@@ -103,6 +103,61 @@ describe('edge cases', () => {
   });
 });
 
+describe('bringing the screen back into view', () => {
+  // The pretend browser has no layout, so place the screen and Press Start
+  // by hand and record any scrolling.
+  function setUp({ screenTop, startBottom, cabinetHeight = 400, reducedMotion = false }) {
+    loadPage(TEST_GAMES);
+    const scrolls = [];
+    $('.screen').getBoundingClientRect = () => ({ top: screenTop });
+    $('.press-start').getBoundingClientRect = () => ({ bottom: startBottom });
+    $('.cabinet').getBoundingClientRect = () => ({ top: startBottom - cabinetHeight });
+    $('.cabinet').scrollIntoView = (options) => scrolls.push({ to: 'cabinet', ...options });
+    $('.screen').scrollIntoView = (options) => scrolls.push({ to: 'screen', ...options });
+    window.matchMedia = (query) => ({ matches: reducedMotion && query === '(prefers-reduced-motion: reduce)' });
+    return scrolls;
+  }
+
+  it('scrolls up to the cabinet when the screen is above the top of the window', () => {
+    const scrolls = setUp({ screenTop: -400, startBottom: -20 });
+    carts()[2].click();
+    expect($('.screen-title').textContent).toBe('Game Three');
+    expect(scrolls).toEqual([{ to: 'cabinet', behavior: 'smooth', block: 'start' }]);
+  });
+
+  it('scrolls to the screen instead when the whole cabinet is too tall for the window', () => {
+    const scrolls = setUp({ screenTop: -400, startBottom: -20, cabinetHeight: window.innerHeight + 10 });
+    carts()[1].click();
+    expect(scrolls).toEqual([{ to: 'screen', behavior: 'smooth', block: 'start' }]);
+  });
+
+  it('scrolls when Press Start is below the bottom of the window', () => {
+    const scrolls = setUp({ screenTop: 300, startBottom: window.innerHeight + 50 });
+    carts()[1].click();
+    expect(scrolls).toHaveLength(1);
+  });
+
+  it('leaves the page where it is when the screen is already showing', () => {
+    const scrolls = setUp({ screenTop: 120, startBottom: 500 });
+    carts()[1].click();
+    expect(scrolls).toEqual([]);
+  });
+
+  it('jumps instead of gliding for people who turn off animations', () => {
+    const scrolls = setUp({ screenTop: -400, startBottom: -20, reducedMotion: true });
+    carts()[1].click();
+    expect(scrolls).toEqual([{ to: 'cabinet', behavior: 'auto', block: 'start' }]);
+  });
+
+  it('does not scroll when the page first loads', () => {
+    loadPage(TEST_GAMES);
+    let scrolled = false;
+    $('.cabinet').scrollIntoView = () => { scrolled = true; };
+    start(document, TEST_GAMES);
+    expect(scrolled).toBe(false);
+  });
+});
+
 describe('the real game list', () => {
   it('fills the shelf with every game', () => {
     loadPage(GAMES);

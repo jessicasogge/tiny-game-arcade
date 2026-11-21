@@ -55,8 +55,6 @@ The tests check each entry: every field is filled in, the link is a full `https:
 - `public/apple-touch-icon.png`: the 180 × 180 icon an iPhone or iPad uses when the arcade is added to the home screen. It's the tab icon (`favicon.svg`) scaled up on the page's night background, with no see-through parts.
 - `public/sitemap.xml`: every page, for search engines.
 
-Visits are counted on [GoatCounter](https://www.goatcounter.com/), on the counter shared with PetriPals (`petripals.goatcounter.com`), where the arcade shows up as `/tiny-game-arcade/`. It uses no cookies and collects nothing personal.
-
 Pushing to `main` runs the tests, then publishes `public/` to GitHub Pages if they pass (`.github/workflows/pages.yml`).
 
 ## Fonts

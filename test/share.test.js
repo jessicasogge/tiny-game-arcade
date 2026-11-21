@@ -48,3 +48,9 @@ describe('home screen icon', () => {
     expect(png[25]).toBe(2); // PNG color type 2: red, green, blue, no transparency
   });
 });
+
+describe('visit counts', () => {
+  it('counts visits on the GoatCounter shared with PetriPals, without slowing the page', () => {
+    expect(html).toMatch(/<script data-goatcounter="https:\/\/petripals\.goatcounter\.com\/count"\s+async src="https:\/\/gc\.zgo\.at\/count\.js"><\/script>/);
+  });
+});

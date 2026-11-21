@@ -9,6 +9,7 @@ On the shelf now:
 - **[Build a Rainbow](https://jessicasogge.github.io/build-a-rainbow/):** eight rainbow color games for young kids.
 - **[The Legend of Mr. Froggles](https://jessicasogge.github.io/legend-of-froggles/):** a magical flying frog, based on an original drawing by Caitlin Sogge.
 - **[Snackerpillar](https://jessicasogge.github.io/snackerpillar/):** steer a hungry caterpillar made of circles, eat colored dots to grow, and don't bump into rocks, mushrooms or her own tail.
+- **[Homebody Hollow](https://jessicasogge.github.io/homebody-hollow/):** pick a tiny cottage that used to be something else, like a boot or a teacup, and design it your way.
 
 ## Running it locally
 

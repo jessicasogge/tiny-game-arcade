@@ -64,4 +64,14 @@ export const GAMES = [
     shell: '#B48CF0',
     screen: '#2E4A1F',
   },
+  {
+    id: 'homebody-hollow',
+    title: 'Homebody Hollow',
+    sub: 'Design a tiny cottage',
+    blurb: 'Pick a tiny cottage that used to be something else, like a boot or a teacup, and design it your way.',
+    tags: ['Cozy', 'Design', 'Cottages'],
+    url: 'https://jessicasogge.github.io/homebody-hollow/',
+    shell: '#BE3455',
+    screen: '#7F1D3A',
+  },
 ];

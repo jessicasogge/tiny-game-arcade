@@ -13,6 +13,13 @@
   <circle cx="38" cy="50" r="7" fill="#7AD3A8" stroke="#2B6B4C" stroke-width="1.5" />
   <circle cx="49" cy="46" r="7" fill="#FFD95A" stroke="#8A6A12" stroke-width="1.5" />
   <circle cx="60" cy="41" r="7" fill="#B48CF0" stroke="#5A3A92" stroke-width="1.5" />
+  <!-- Her antennae, the same curve as in the game (snackerpillar/public/game/draw.js) -->
+  <g stroke="#3A2508" stroke-width="1.3" stroke-linecap="round" fill="none">
+    <path d="M69.9 28.4 Q68.5 24.3 66.7 23" />
+    <path d="M76.1 28.4 Q77.5 24.3 79.3 23" />
+  </g>
+  <circle cx="66.7" cy="23" r="1.6" fill="#3A2508" />
+  <circle cx="79.3" cy="23" r="1.6" fill="#3A2508" />
   <circle cx="73" cy="36" r="9" fill="#F2B462" stroke="#7A4A12" stroke-width="1.5" />
   <circle cx="70" cy="35" r="1.5" fill="#3A2508" />
   <circle cx="77" cy="35" r="1.5" fill="#3A2508" />
